@@ -1,4 +1,4 @@
-// Konstruktrfunktion för Color
+// Konstruktorfunktion 
 function Color(r, g, b){
     this.r = r;
     this.g = g;
@@ -13,17 +13,16 @@ Color.prototype.rgb = function (){
 
 //Metod för att konvertera färg till hex-format
 Color.prototype.hex = function(){
-    const hexR = this.r.toString(16).padStart(2, '0');
-    const hexG = this.r.toString(16).padStart(2, '0');
-    const hexB = this.r.toString(16).padStart(2, '0');
+    return rgbToHex(this.r, this.g, this.b);
+};
 
-    //retunera hexkoden
-    return `#${hexR}${hexG}${hexB}`;
-}
 // Metod för att konvertera färg till rgba-format med användarens specificerade alpha-värde(opacitet)
 Color.prototype.rgba = function(alpha) {
     return `rgba(${this.r},${this.g},${this.b},${alpha})`;
 };
+//Metod för att konvertera fgrb till hex
+const rgbToHex = (r, g, b) => '#' + [r, g, b]
+  .map(x => x.toString(16).padStart(2, '0')).join('');
 
 //Skapa ny färg
 const myColor = new Color(9, 185, 233);// ka skiva in friviliga nummer mellan 0-255
