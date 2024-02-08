@@ -25,7 +25,7 @@ const rgbToHex = (r, g, b) => '#' + [r, g, b]
   .map(x => x.toString(16).padStart(2, '0')).join('');
 
 //Skapa ny färg
-const myColor = new Color(9, 185, 233);// ka skiva in friviliga nummer mellan 0-255
+const myColor = new Color(456, 135, 235);// ka skiva in friviliga nummer mellan 0-255
 // Skriv ut färgen i olika format
 console.log(myColor.rgb()); 
 console.log(myColor.hex()); 
