@@ -1,3 +1,4 @@
+
 const rInput = document.querySelector('#r');
 const gInput = document.querySelector('#g');
 const bInput = document.querySelector('#b');
